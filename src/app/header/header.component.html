@@ -1,0 +1,48 @@
+<div id="page">
+	<nav class="colorlib-nav" role="navigation">
+		<div class="top-menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2">
+						<div id="colorlib-logo">
+							<a href="index.html">Virtual<span>Lawyer.</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-10 text-right menu-1">
+						<ul>
+							<li class="active">
+								<a routerLink="/home">Home</a>
+							</li>
+							<li>
+								<a (click)="scroll('target')" routerLink="/home">Practice Areas</a>
+							</li>
+
+							<li>
+								<a routerLink="/view-order">Proposals</a>
+							</li>
+							
+							<li>
+
+								<a style="color: red;" *ngIf="notify_number != 0" routerLink="/chat"><i class="fas fa-envelope">
+									<p  class="sup">{{notify_number}}</p>
+									</i>Messages</a>
+									<a *ngIf="notify_number == 0" routerLink="/chat"><i class="fas fa-envelope">
+									</i>Messages</a>
+
+							</li>
+							<li *ngIf="data">
+								<a  (click)="profile()" >{{data.username.split('@')[0]}}</a>
+							</li>
+							<li>
+								<a (click)="logout()" >Logout</a>
+							</li>
+
+													</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</nav>
+</div>

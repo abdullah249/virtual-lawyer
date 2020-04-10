@@ -1,0 +1,116 @@
+<app-header></app-header>
+<div class="container">
+<div class="row-content"></div>	
+		<div class="row-content" >
+         			<div class="col-lg-3">
+					<p></p>
+					<p></p>
+		     
+			<h4>
+				 My Orders 
+	    	</h4>
+						<p>
+						
+
+				<div class="pull-left">
+				
+				</div>
+				<div class="pull-right" style="margin-left:10px;">0</div>
+				</div>
+		
+				
+		
+			
+					<div class="col-lg-9">
+						
+				<hr />
+				<div  *ngFor="let order of orders" class="review-block">
+					<div (click)="PlaceOrder(order)" class="row">
+						<div class="col-lg-9">	
+						{{order.title}}
+						</div>
+						<div class="col-lg-9">
+							<p></p>
+                        {{order.description}}
+                            <p></p>
+							<div class="col-lg-9">
+								<p>Per hour Price:
+								
+								<b>	{{order.price}}</b>$
+								</p>
+							
+							</div>
+							<div class="col-lg-9">
+                    {{order.user}}
+              </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+			
+			<div class="row">
+			<div class="col-lg-3">
+				<div class="rating-block">
+				
+			
+				
+			</div>
+		
+
+		</div>
+
+	</div> <!-- /container -->
+
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+
+	<div id="myOverlay" class="overlay">
+		<span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+		<div class="overlay-content">
+			<form action="/action_page.php">
+				<input type="text" placeholder="Search.." name="search">
+				<button type="submit"><i class="fa fa-search"></i></button>
+			</form>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- countTo -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<script src="js/ie10-viewport-bug-workaround.js"></script>
+

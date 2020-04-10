@@ -1,0 +1,169 @@
+<app-header></app-header>
+
+  <div class="container">
+    <div class="row profile">
+      <div class="col-md-4" >
+        <div class="profile-sidebar" style="text-align:center">
+          <!-- SIDEBAR USERPIC -->
+          <div *ngIf="lawyer" class="profile-userpic">
+            <img  [src]="lawyer.image" class="img-responsive" alt="" style="display: block;margin-left: auto;margin-right: auto">
+          </div>
+          <!-- END SIDEBAR USERPIC -->
+          <!-- SIDEBAR USER TITLE -->
+          <div class="profile-usertitle">
+		  <p></p>
+		  <p></p>
+            <div *ngIf="lawyer" class="profile-usertitle-name">
+			
+              {{lawyer.first_name}}
+            </div>
+			<p></p>
+            <div class="profile-usertitle-job">
+              Advocate High Court
+            </div>
+          </div>
+          <!-- END SIDEBAR USER TITLE -->
+          <!-- SIDEBAR BUTTONS -->
+          <div class="profile-userbuttons">
+            
+            <button (click)="openChatBox()" type="button" class="btn btn-danger btn-sm" routerLink="/chat">Message</button>
+          </div>
+          <!-- END SIDEBAR BUTTONS -->
+          <!-- SIDEBAR MENU -->
+          <div class="profile-usermenu">
+            <ul class="nav">
+              <li (click)="review()" class="active">
+                <a>
+                  <i class="glyphicon glyphicon-home"></i>
+                  Review </a>
+              </li>
+              
+
+              
+            </ul>
+          </div>
+          <!-- END MENU -->
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div *ngIf="lawyer" class="profile-content">
+          <ngb-tabset>
+            <ngb-tab title="About">
+              <ng-template ngbTabContent>
+			  <p></p>
+			  <p></p>
+			  <p> {{lawyer.first_name}}</p>
+			    <p><b>Contact: </b>{{lawyer.contact}}</p>
+				<p><b>State:</b>{{lawyer.state}}</p>
+				<p><b>Licence Number:</b> {{lawyer.license_number}}</p>
+                
+				
+              </ng-template>
+            </ngb-tab>
+            <ngb-tab title="Contact">
+              <ng-template ngbTabContent>
+			  <p></p>
+			  <p></p>
+                <p>{{lawyer.contact}}</p>
+              </ng-template>
+            </ngb-tab>
+            <ngb-tab title="Reviews">
+              <ng-template ngbTabContent>
+                <app-reviews></app-reviews>
+              </ng-template>
+            </ngb-tab>
+
+            <ngb-tab title="Attorney Endorsement">
+              <ng-template ngbTabContent>
+               <div class="col-lg-12">
+        <hr />
+        <div  *ngFor="let lawyer of lawyers" class="review-block">
+          <div (click)="lawyerProfile(lawyer)" class="row">
+            <div class="col-lg-3">
+              <img [src]="lawyer.image" height="50" width="50" class="img-rounded">
+              <div class="review-block-name"><a href="#">{{lawyer.first_name}}</a></div>
+            </div>
+            <div class="col-lg-9">
+              <div class="review-block-rate">
+                <ngx-stars [size]="0.5" [readonly]="true" [color]="'#c69500'" (ratingOutput)="onRatingSet($event)" [initialStars]="lawyer.rate"></ngx-stars>
+              </div>
+              <div class="review-block-title">{{lawyer.first_name}}</div>
+              <div class="review-block-description">
+                <p>
+                  {{lawyer.about}}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+              </ng-template>
+            </ngb-tab>
+
+          </ngb-tabset>
+        </div>
+      </div>
+
+
+
+      <br>
+      <br>
+
+
+      <div id="myOverlay" class="overlay">
+        <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+        <div class="overlay-content">
+          <form action="/action_page.php">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+      </div>
+
+
+
+
+      <!-- Bootstrap core JavaScript
+    ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+
+
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+
+     
+
+      <div class="gototop js-top">
+        <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+      </div>
+
+      <!-- jQuery -->
+      <script src="js/jquery.min.js"></script>
+      <!-- jQuery Easing -->
+      <script src="js/jquery.easing.1.3.js"></script>
+      <!-- Bootstrap -->
+      <script src="js/bootstrap.min.js"></script>
+      <!-- Waypoints -->
+      <script src="js/jquery.waypoints.min.js"></script>
+      <!-- Stellar Parallax -->
+      <script src="js/jquery.stellar.min.js"></script>
+      <!-- Carousel -->
+      <script src="js/owl.carousel.min.js"></script>
+      <!-- Flexslider -->
+      <script src="js/jquery.flexslider-min.js"></script>
+      <!-- countTo -->
+      <script src="js/jquery.countTo.js"></script>
+      <!-- Magnific Popup -->
+      <script src="js/jquery.magnific-popup.min.js"></script>
+      <script src="js/magnific-popup-options.js"></script>
+      <!-- Main -->
+      <script src="js/main.js"></script>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+  
+  
+
+<script  src="js/index.js"></script>

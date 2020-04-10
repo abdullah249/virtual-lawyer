@@ -1,0 +1,263 @@
+<app-header></app-header>
+<div class="img-container">
+	<ngb-carousel *ngIf="images" [interval]="5000" [showNavigationArrows]="showNavigationArrows" [showNavigationIndicators]="showNavigationIndicators">
+		<ng-template ngbSlide *ngFor="let image of images">
+			<img [src]="image"  alt="Random slide">
+			<div class="carousel-caption">
+			</div>
+		</ng-template>
+	</ngb-carousel>
+</div>
+<div id="colorlib-practice">
+	<div id="target" #target class="container">
+		<div class="row animate-box11">
+			<div class="col-sm-8 col-sm-offset-2 text-center colorlib-heading">
+				<h1>Book a Lawyer</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div (click)="PracticeArea('Real Estate')" class="col-md-4 text-center animate-box11">
+				<div class="services">
+					<span class="icon">
+						<i class="flaticon-courthouse">
+						</i>
+					</span>
+					<div class="desc">
+						<h3>
+							<a href="#">Real Estate Law</a>
+						</h3>
+						<p>For resolving out your property and mortage issues</p>
+					</div>
+				</div>
+			</div>
+			<div (click)="PracticeArea('Insurance Law')" class="col-md-4 text-center animate-box1">
+				<div class="services">
+					<span class="icon">
+						<i class="flaticon-padlock">
+						</i>
+					</span>
+					<div class="desc">
+						<h3>
+							<a href="#">Insurance Law</a>
+						</h3>
+						<p>Whether you got health insurance,car insurance, medical insurance, or property insurance issues we will provide you with the best of lawyers</p>
+					</div>
+				</div>
+			</div>
+			<div (click)="PracticeArea('Business Law')" class="col-md-4 text-center animate-box1">
+				<div class="services">
+					<span class="icon">
+						<i class="flaticon-folder">
+						</i>
+					</span>
+					<div class="desc">
+						<h3>
+							<a href="#">Business Law</a>
+						</h3>
+						<p>Your one stop look for business issues and corporate issues</p>
+					</div>
+				</div>
+			</div>
+			<div (click)="PracticeArea('Personal Injury')" class="col-md-4 text-center animate-box1">
+				<div class="services">
+					<span class="icon">
+						<i class="flaticon-handcuffs">
+						</i>
+					</span>
+					<div class="desc">
+						<h3>
+							<a href="#">Personal Injury</a>
+						</h3>
+						<p>Your personal injury whether got by an accident</p>
+					</div>
+				</div>
+			</div>
+			<div (click)="PracticeArea('Medical Neglegence')" class="col-md-4 text-center animate-box1">
+				<div class="services">
+					<span class="icon">
+						<i class="flaticon-handcuffs">
+						</i>
+					</span>
+					<div class="desc">
+						<h3>
+							<a href="#">Medical Neglegence</a>
+						</h3>
+						<p>All your medical issues resolved by these lawyers </p>
+					</div>
+				</div>
+			</div>
+			<div (click)="PracticeArea('Criminal Defense')" class="col-md-4 text-center animate-box1">
+				<div class="services">
+					<span class="icon">
+						<i class="flaticon-libra">
+						</i>
+					</span>
+					<div class="desc">
+						<h3>
+							<a href="#">Criminal Defense</a>
+						</h3>
+						<p>Providing you with the best criminal justice system </p>
+					</div>
+				</div>
+			</div>
+			<div  (click)="PracticeArea('Others')"class="col-md-12 text-center animate-box1">
+				<p>
+					
+				</p>
+			</div>
+	</div>
+</div>
+</div>
+<div id="colorlib-about">
+	<div class="container">
+		<div class="row animate-box1">
+			<div class="col-sm-8 col-sm-offset-2 text-center colorlib-heading">
+				<h2>Create your Documents</h2>
+				<p>We can Provide you with the best of attorneys and with great lawyers</p>
+			</div>
+				<div class="row">
+			<div (click)="PracticeArea('Real Estate')" class="col-md-4 text-center animate-box11">
+				<div class="services">
+					<span class="icon">
+						<i class="flaticon-courthouse">
+						</i>
+					</span>
+					<div class="desc">
+						<h3>
+							<a href="#">Start a business</a>
+						</h3>
+						<p>Save time and money, so you can focus on growing your business</p>
+					</div>
+				</div>
+			</div>
+			<div (click)="Divorce()" class="col-md-4 text-center animate-box1">
+				<div class="services">
+					<span class="icon">
+						<i class="flaticon-padlock">
+						</i>
+					</span>
+					<div class="desc">
+						<h3>
+							<a href="#">File a Divorce</a>
+						</h3>
+						<p>To organize personal and financial information about you and your spouse to assist you in preparing for a divorce </p>
+					</div>
+				</div>
+			</div>
+			<div (click)="PracticeArea('Business Law')" class="col-md-4 text-center animate-box1">
+				<div class="services">
+					<span class="icon">
+						<i class="flaticon-folder">
+						</i>
+					</span>
+					<div class="desc">
+						<h3>
+							<a href="#">Protect your Ideas </a>
+						</h3>
+						<p>Have an experienced intellectual property attorney assist with your strategy </p>
+					</div>
+				</div>
+			</div>
+			<div (click)="PracticeArea('Personal Injury')" class="col-md-4 text-center animate-box1">
+				<div class="services">
+					<span class="icon">
+						<i class="flaticon-handcuffs">
+						</i>
+					</span>
+					<div class="desc">
+						<h3>
+							<a href="#">Buy or sell a Home</a>
+						</h3>
+						<p>Get all the documents and advice you need as a homeowner</p>
+					</div>
+				</div>
+			</div>
+			<div (click)="PracticeArea('Medical Neglegence')" class="col-md-4 text-center animate-box1">
+				<div class="services">
+					<span class="icon">
+						<i class="flaticon-handcuffs">
+						</i>
+					</span>
+					<div class="desc">
+						<h3>
+							<a href="#">Make a Sale</a>
+						</h3>
+						<p>Create a Bill of Sale to transfer ownership of personal property, like furniture, decorative or equipment</p>
+					</div>
+				</div>
+			</div>
+			<div (click)="PracticeArea('Criminal Defense')" class="col-md-4 text-center animate-box1">
+				<div class="services">
+					<span class="icon">
+						<i class="flaticon-libra">
+						</i>
+					</span>
+					<div class="desc">
+						<h3>
+							<a href="#">Rent a Property</a>
+						</h3>
+						<p>Get your terms in writing to protect your property</p>
+					</div>
+				</div>
+			</div>
+			<div  (click)="PracticeArea('Others')"class="col-md-12 text-center animate-box1">
+				<p>
+					
+				</p>
+			</div>
+	</div>
+		</div>
+	
+	</div>
+</div>
+<app-footer></app-footer>
+<div id="myOverlay" class="overlay">
+	<span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+	<div class="overlay-content">
+		<form action="/action_page.php">
+			<input type="text" placeholder="Search.." name="search">
+			<button type="submit" >
+				<i class="fa fa-search">
+				</i>
+			</button>
+		</form>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="gototop js-top">
+	<a href="#" class="/assets/js-gotop">
+		<i class="icon-arrow-up">
+		</i>
+	</a>
+</div>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
