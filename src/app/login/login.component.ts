@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
 	password = '';
 	error:any = {invalid: false}
 
-	url = "http://localhost:8000/loginUser/";
+	url = "https://vlawyer-backend.herokuapp.com/loginUser/";
 
 	constructor(private http:HttpClient, private router: Router, private authService: AuthService) { }
 
