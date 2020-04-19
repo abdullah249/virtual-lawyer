@@ -17,7 +17,7 @@ export class SignupClientComponent implements OnInit {
 	password;
 	data:any = {};
 	error:any = {invalid: false}
-	url = "http://localhost:8000/SignupClient/"
+	url = "https://vlawyer-backend.herokuapp.com/SignupClient/"
 
 	constructor(private http:HttpClient, private authService: AuthService, private router: Router) { }
 
