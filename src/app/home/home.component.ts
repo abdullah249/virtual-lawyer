@@ -26,10 +26,10 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.data = this.authService.getUserData()
-      this.http.get("http://localhost:8000/topLawyers").toPromise().then((res:any) => {
+      this.http.get("https://vlawyer-backend.herokuapp.com/topLawyers").toPromise().then((res:any) => {
         this.topLawyers = res;
         for (let i = this.topLawyers.length - 1; i >= 0; i--) {
-          this.topLawyers[i].image = "http://localhost:8000/media/" + this.topLawyers[i].image
+          this.topLawyers[i].image = "https://vlawyer-backend.herokuapp.com/media/" + this.topLawyers[i].image
         }
       });
   }
