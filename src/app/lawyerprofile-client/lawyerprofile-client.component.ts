@@ -41,8 +41,8 @@ export class LawyerprofileClientComponent implements OnInit {
 			this.data = this.authService.getUserData();
 			this.displayName = this.data.username.split('@')[0]
 
-		this.http.post("http://localhost:8000/getLawyerById/",{'lawyerid': this.lawyerID}).subscribe((lawyer:any) => {
-			lawyer.image = "http://localhost:8000/media/" + lawyer.image
+		this.http.post("https://vlawyer-backend.herokuapp.com//getLawyerById/",{'lawyerid': this.lawyerID}).subscribe((lawyer:any) => {
+			lawyer.image = "https://vlawyer-backend.herokuapp.com/media/" + lawyer.image
 			this.lawyer = lawyer;
 		});
 
@@ -69,7 +69,7 @@ export class LawyerprofileClientComponent implements OnInit {
 				'client': this.data.username
 			}
 
-			this.http.post("http://localhost:8000/addSaved/",id).subscribe((data:any) => {
+			this.http.post("https://vlawyer-backend.herokuapp.com/addSaved/",id).subscribe((data:any) => {
 				this.router.navigate(['/savedlawyers-client'])
 			},
 		(err:any) => {
