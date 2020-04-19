@@ -6,14 +6,15 @@
      
 <div class="form1">
     <form>
-    <label for="Ename">Title</label>
+      <input type="Ename" class="form-control" placeholder="Title"   id="title" name="title" [(ngModel)]="data.title" #name="ngModel" email>
+    <label for="Ename"  id="username" name="username" [(ngModel)]="data.name" #username="ngModel" >Title</label>
 <input type="text" id="title" name="title" placeholder="Enter title"[(ngModel)]="data.title" style="margin-left:50px">
  <br>
 <label for="Ename">Description</label>
-  <input type="text" id="description" name="description" placeholder="Enter Description" [(ngModel)]="data.description" style="margin-left: 64px">
+  <input type="text" id="description" name="description" placeholder="Enter Description" id="description" name="description" [(ngModel)]="data.description" #description="ngModel" style="margin-left: 64px">
 <br>
 <label for="Ename">Price Per Hour</label>
-<input type="text" id="price" name="price" placeholder="Enter Price" [(ngModel)]="data.price" style="margin-left: 56px">
+<input type="text" id="price" name="price" placeholder="Enter Price"  id="price" name="price" [(ngModel)]="data.price" #price="ngModel" style="margin-left: 56px">
 <br>
       
 <input type="submit" (click)="viewOrder()" value="Place Order" class="btn float-right login_btn" [disabled]="f.form.pristine || f.form.invalid" style="background-color: aliceblue;border-block-end-color: #000;font-size: medium;">
