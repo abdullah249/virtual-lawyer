@@ -45,7 +45,7 @@ export class EditprofileLawyerComponent implements OnInit {
 		this.displayName = this.data.username.split('@')[0]
 		this.imageSrc = this.data.image
 
-		this.http.get("http://localhost:8000/getCategories").toPromise().then((res:any) => {
+		this.http.get("https://vlawyer-backend.herokuapp.com/getCategories").toPromise().then((res:any) => {
 			this.allCategories = res;
 			for (var i = 0; i < this.allCategories.length; ++i) {
 				this.allCategories[i].checked = false;
@@ -53,7 +53,7 @@ export class EditprofileLawyerComponent implements OnInit {
 			let formdata = {
 				'username': this.data.username
 			}
-			this.http.post("http://localhost:8000/getCategoryofLawyer/",formdata).toPromise().then((res:any) => {
+			this.http.post("https://vlawyer-backend.herokuapp.com/getCategoryofLawyer/",formdata).toPromise().then((res:any) => {
 				this.lawyerCategory = res;
 				for (var i = 0; i < this.allCategories.length; ++i) {
 					for (var j = 0; j < this.lawyerCategory.length; ++j) {
@@ -104,7 +104,7 @@ export class EditprofileLawyerComponent implements OnInit {
 		'categories': JSON.stringify(this.allCategories)
 
 		}
-		this.http.post("http://localhost:8000/editProfile/",formdata).toPromise().then((res:any) => {
+		this.http.post("https://vlawyer-backend.herokuapp.com/editProfile/",formdata).toPromise().then((res:any) => {
 			Swal.fire({
 			  position: 'top-end',
 			  type: 'success',
