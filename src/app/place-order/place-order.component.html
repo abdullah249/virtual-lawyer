@@ -4,7 +4,7 @@
         <h3 style="margin-left:4%"><b>Place your order</b></h3>
       <div class="row-content">
      
-<div class="form1">
+<div class="form1" #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>>
     <form>
       <input type="Ename" class="form-control" placeholder="Title"   id="title" name="title" [(ngModel)]="data.title" #name="ngModel" email>
     <label for="Ename"  id="username" name="username" [(ngModel)]="data.name" #username="ngModel" >Title</label>
