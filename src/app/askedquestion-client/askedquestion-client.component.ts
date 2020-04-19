@@ -35,13 +35,13 @@ export class AskedquestionClientComponent implements OnInit {
 			'username': this.data.username
 		}
 
-		this.http.post("http://localhost:8000/askedquestion/",formdata).toPromise().then((res:any) => {
+		this.http.post("https://vlawyer-backend.herokuapp.com/askedquestion/",formdata).toPromise().then((res:any) => {
 			this.askedQuestions = res;
 			for (let i = 0; i < res.length; ++i) {
 				let parameter = {
 					'question': res[i].id
 				}
-				this.http.post("http://localhost:8000/getreply/",parameter).subscribe((reply:any) => {
+				this.http.post("https://vlawyer-backend.herokuapp.com/getreply/",parameter).subscribe((reply:any) => {
 					this.askedQuestions[i]['replys'] = reply;
 				},
 				(err:any)=> {
@@ -62,7 +62,7 @@ export class AskedquestionClientComponent implements OnInit {
 			'username': this.data.username,
 			'text': this.text,
 		}
-		this.http.post("http://localhost:8000/replyquestion/",parameter).toPromise().then((reply:any) => {
+		this.http.post("https://vlawyer-backend.herokuapp.com/",parameter).toPromise().then((reply:any) => {
 			this.text = ""
 			this.event.target.value = ""
 			// this.updateReply()
