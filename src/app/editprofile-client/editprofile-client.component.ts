@@ -61,7 +61,7 @@ export class EditprofileClientComponent implements OnInit {
 			'email': this.data.email,
 		}
 
-		this.http.post("http://localhost:8000/editProfileClient/",formdata).toPromise().then((res:any) => {
+		this.http.post("https://vlawyer-backend.herokuapp.com/editProfileClient/",formdata).toPromise().then((res:any) => {
 			Swal.fire({
 			  position: 'top-end',
 			  type: 'success',
