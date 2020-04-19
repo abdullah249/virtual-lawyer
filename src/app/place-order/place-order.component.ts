@@ -33,7 +33,7 @@ export class PlaceOrderComponent implements OnInit {
     'price': f.value.price,
   }
 
-  this.http.post("http://localhost:8000/add_orders/",formdata).toPromise().then((res:any) => {
+  this.http.post("https://vlawyer-backend.herokuapp.com/add_orders/",formdata).toPromise().then((res:any) => {
     console.log('Response',res);
     try{
       
