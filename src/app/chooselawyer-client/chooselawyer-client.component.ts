@@ -43,13 +43,13 @@ export class ChooselawyerClientComponent implements OnInit {
 		let formdata = {
 			'catogery': this.category
 		}
-		this.http.post("http://localhost:8000/getLawyersByCategory/",{'catogery': this.category}).toPromise().then((res:any) => {
+		this.http.post("https://vlawyer-backend.herokuapp.com/getLawyersByCategory/",{'catogery': this.category}).toPromise().then((res:any) => {
 			for (var i = 0; i < res.length; ++i) {
 				let id = {
 					'lawyerid': res[i].lawyerid_id
 				}
-				this.http.post("http://localhost:8000/getLawyerById/",{'lawyerid': res[i].lawyerid_id}).subscribe((lawyer:any) => {
-					lawyer.image = "http://localhost:8000/media/" + lawyer.image
+				this.http.post("https://vlawyer-backend.herokuapp.com/getLawyerById/",{'lawyerid': res[i].lawyerid_id}).subscribe((lawyer:any) => {
+					lawyer.image = "https://vlawyer-backend.herokuapp.com/media/" + lawyer.image
 					this.lawyers.push(lawyer);
 					this.allLawyers.push(lawyer);
 				});
