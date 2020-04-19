@@ -29,7 +29,7 @@ export class ViewOrderComponent implements OnInit {
   let formdata = {
     'order': this.order
   }
-  this.http.post("http://localhost:8000/read_orders/",{'order': this.order}).subscribe((data:any) => {
+  this.http.post("https://vlawyer-backend.herokuapp.com/read_orders/",{'order': this.order}).subscribe((data:any) => {
         this.order=data;
         this.orders=data;
     },
