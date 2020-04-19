@@ -58,7 +58,9 @@ export class PlaceOrderComponent implements OnInit {
   }
   );
 }
-
+viewOrder()
+  {this.router.navigate(['/view-order']);
+  }
 
 
 
