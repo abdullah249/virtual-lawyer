@@ -10,13 +10,9 @@
 					
 				</div>
 
-					<form name="form" #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+	<form name="form" #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
 					
-
-    <form>
       <input type="Ename" class="form-control" placeholder="Title"   id="title" name="title" [(ngModel)]="data.title" #name="ngModel" email>
-    <label for="Ename"  id="username" name="username" [(ngModel)]="data.name" #username="ngModel" >Title</label>
-<input type="text" id="title" name="title" placeholder="Enter title"[(ngModel)]="data.title" style="margin-left:50px">
  <br>
 <label for="Ename">Description</label>
   <input type="text" id="description" name="description" placeholder="Enter Description" id="description" name="description" [(ngModel)]="data.description" #description="ngModel" style="margin-left: 64px">
