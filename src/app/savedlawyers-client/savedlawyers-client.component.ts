@@ -23,7 +23,7 @@ lawyers;
 			let id = {
 				'username': this.data.username
 			}
-			this.http.post("http://localhost:8000/getSavedLawyers/",id).subscribe((data:any) => {
+			this.http.post("https://vlawyer-backend.herokuapp.com/getSavedLawyers/",id).subscribe((data:any) => {
 			this.lawyers = data;
 			},
 		(err:any) => {
