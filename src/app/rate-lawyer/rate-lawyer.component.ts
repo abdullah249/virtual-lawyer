@@ -40,8 +40,8 @@ export class RateLawyerComponent implements OnInit {
 		'lawyerid': this.lawyerID
 	}
 
-	this.http.post("http://localhost:8000/getLawyerById/",id).subscribe((lawyer:any) => {
-		lawyer.image = "http://localhost:8000/media/" + lawyer.image
+	this.http.post("https://vlawyer-backend.herokuapp.com/getLawyerById/",id).subscribe((lawyer:any) => {
+		lawyer.image = "https://vlawyer-backend.herokuapp.com/media/" + lawyer.image
 		this.lawyer = lawyer;
 		console.log(this.lawyer);
 	});
@@ -64,7 +64,7 @@ export class RateLawyerComponent implements OnInit {
 			'isHired': this.isHired,
 		}
 
-		this.http.post("http://localhost:8000/RateLawyer/",formdata).subscribe((res:any) => {
+		this.http.post("https://vlawyer-backend.herokuapp.com/RateLawyer/",formdata).subscribe((res:any) => {
 			this.rate = 4;
 			this.title = "";
 			this.description = "";
