@@ -70,4 +70,4 @@ export class SignupLawyerComponent implements OnInit {
   {
   
 		this.router.navigate(['/home']);}
-
+}
