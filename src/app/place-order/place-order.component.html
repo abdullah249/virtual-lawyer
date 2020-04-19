@@ -3,8 +3,16 @@
     <br>
         <h3 style="margin-left:4%"><b>Place your order</b></h3>
       <div class="row-content">
-     
-<div class="form1" #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>>
+     <div class="d-flex justify-content-center h-100">
+			<div class="card">
+				<div class="card-header" style="font-size: large;font-family: sans-serif;">
+					<h3>Place An Order</h3>
+					
+				</div>
+				<div class="card-body"  style="background-color: white;">
+					<form name="form" #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+					
+
     <form>
       <input type="Ename" class="form-control" placeholder="Title"   id="title" name="title" [(ngModel)]="data.title" #name="ngModel" email>
     <label for="Ename"  id="username" name="username" [(ngModel)]="data.name" #username="ngModel" >Title</label>
@@ -24,7 +32,8 @@
        
           </div>
          </div>
-
+</div>
+        </div>
         <div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
