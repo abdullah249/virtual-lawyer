@@ -15,10 +15,12 @@
 <label for="Ename">Price Per Hour</label>
 <input type="text" id="price" name="price" placeholder="Enter Price" [(ngModel)]="data.price" style="margin-left: 56px">
 <br>
+      
+<input type="submit" (click)="viewOrder()" value="Place Order" class="btn float-right login_btn" [disabled]="f.form.pristine || f.form.invalid" style="background-color: aliceblue;border-block-end-color: #000;font-size: medium;">
 </form>
           </div>
           <br>
-          <button type="button" (click)="viewOrder()" class="btn btn-primary" style="width:130px;height:50px  ">Save</button>
+       
           </div>
          </div>
 
