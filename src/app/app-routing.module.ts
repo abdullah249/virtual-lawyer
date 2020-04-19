@@ -26,9 +26,10 @@ import {MyOrderComponent } from './my-order/my-order.component';
 import {VideoCallComponent} from './video-call/video-call.component';
 import {DivorceComponent} from './divorce/divorce.component';
 const routes: Routes = [
-  { path: '', component: LoginComponent },
-  { path: 'forgot', component: ForgotPasswordComponent },
+  { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'forgot', component: ForgotPasswordComponent },
   { path: 'signup-lawyer', component: SignupLawyerComponent },
   { path: 'signup-client', component: SignupClientComponent },
   { path: 'askquestion', component: AskquestionComponent },

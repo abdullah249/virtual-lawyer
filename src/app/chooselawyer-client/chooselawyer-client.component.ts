@@ -32,6 +32,7 @@ export class ChooselawyerClientComponent implements OnInit {
 	}
 
 	ngOnInit() {
+		if(this.data){
 		this.data = this.authService.getUserData()
 
 			if(this.data.type == "lawyer") {
@@ -55,6 +56,7 @@ export class ChooselawyerClientComponent implements OnInit {
 			}
 		});
 	}
+}
 
 
 

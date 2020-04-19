@@ -19,6 +19,7 @@ export class AuthService {
 
 	getUserData() {
 		let data = JSON.parse(localStorage.getItem('data'))
+		console.log(data)
 		if(!data){
 			this.router.navigate(['/'])
 		}

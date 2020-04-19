@@ -16,13 +16,14 @@ export class ViewOrderComponent implements OnInit {
 	data:any;
 	displayName;
 	title;
-	description;
+  description;
+  
 	
 	constructor(private authService: AuthService, private router: Router, private activatedRoute: ActivatedRoute, private http:HttpClient) {
 		
 	}
   ngOnInit() {
-    this.data = this.authService.getUserData()
+   // this.data = this.authService.getUserData()
 
    
   let formdata = {
@@ -48,6 +49,10 @@ export class ViewOrderComponent implements OnInit {
   MyOrders(order)
   {
    // this.router.navigate(["/my-orders"])
+  }
+  chat()
+  {
+	  this.router.navigate(["/chat"])
   }
 
 }

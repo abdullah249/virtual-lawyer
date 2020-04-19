@@ -24,7 +24,9 @@ export class HeaderComponent implements OnInit,OnDestroy {
 
   ngOnInit() {
     this.notify();
-    this.data =this.authService.getUserData()
+    if(!this.data){
+    this.data =this.authService.getUserData();
+    }
   }
 
   
@@ -41,6 +43,10 @@ export class HeaderComponent implements OnInit,OnDestroy {
     }
   }
 
+  login()
+  {
+    this.router.navigate(['/login']);
+  }
   PracticeArea(name) {
     this.router.navigate(['/chooselawyer-client'], { queryParams: { "name": name } });
   }
@@ -56,7 +62,8 @@ export class HeaderComponent implements OnInit,OnDestroy {
   }
 
   ngOnDestroy() {
+    if(!this.data){
     this.notifierService.unsubscribe();
   }
-
+  }
 }

@@ -24,7 +24,28 @@
             ],
             "styles": [
               "src/styles.css"
+              // "src/assets/scss/style.scss",
+              // "src/assets/css/animate.css",
+              // "src/assets/css/aos.css",
+              // "src/assets/css/bootstrap.css",
+              // "src/assets/css/bootstrap.min.css",
+              // "src/assets/css/bootstrap-datepicker.css",
+              // "src/assets/css/flaticon.css",
+              // "src/assets/css/flexslider.css",
+              // "src/assets/css/icomoon.css",
+              // "src/assets/css/ionicons.min.css",
+              // "src/assets/css/jquery.timepicker.css",
+              // "src/assets/css/magnific-popup.css",
+              // "src/assets/css/open-iconic-bootstrap.min.css",
+              
+              // "src/assets/css/owl.theme.default.min.css"
+            
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+               "src/assets/sass"
+              ]
+            },
             "scripts": []
           },
           "configurations": {

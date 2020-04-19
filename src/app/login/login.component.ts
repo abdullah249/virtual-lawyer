@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
 
 	ngOnInit() {
 		let data = this.authService.getUserData()
+
 		if(!data)
 			return
 		if(data.type == "lawyer")
@@ -35,10 +36,12 @@ export class LoginComponent implements OnInit {
 	onSubmit(f: NgForm) {
 		// this.username = f.value.username;
 		// this.password = f.value.password;
+		console.log(' f.value.username',  f.value.username)
 		let formdata = {
 			'username': f.value.username,
 			'password': f.value.password,
 		}
+		console.log('formdata', formdata)
 
 		this.http.post(this.url,formdata).toPromise().then((res:any) => {
 			localStorage.setItem('token',res.token)
@@ -65,7 +68,3 @@ export class LoginComponent implements OnInit {
 		);
 	}
 }
-
-
-
-

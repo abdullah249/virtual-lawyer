@@ -15,14 +15,22 @@
 								<a routerLink="/home">Home</a>
 							</li>
 							<li>
-								<a (click)="scroll('target')" routerLink="/home">Practice Areas</a>
+								<a (click)="PracticeArea('Criminal Defense')" >Practice Areas</a>
 							</li>
 
 							<li>
-								<a routerLink="/view-order">Proposals</a>
+								<a >Create a Document</a>
+							</li>
+
+							<li *ngIf="data.type == 'client'">
+								<a routerLink="/view-order">Hire a attorney</a>
+							</li>
+							<li *ngIf="data.type == 'lawyer'">
+								<a routerLink="/view-order">View Orders</a>
 							</li>
 							
-							<li>
+							
+							<li *ngIf="data">
 
 								<a style="color: red;" *ngIf="notify_number != 0" routerLink="/chat"><i class="fas fa-envelope">
 									<p  class="sup">{{notify_number}}</p>
@@ -31,13 +39,22 @@
 									</i>Messages</a>
 
 							</li>
-							<li *ngIf="data">
-								<a  (click)="profile()" >{{data.username.split('@')[0]}}</a>
-							</li>
-							<li>
-								<a (click)="logout()" >Logout</a>
-							</li>
+							<li *ngIf="data ; else notdata">	
+							
+								<div class="dropdown">
+									<button class="dropbtn">{{data.username.split('@')[0]}}</button>
+										<div class="dropdown-content">
+									  <a  (click)="profile()">Edit Profile</a>
+									  <a  (click)="logout()">Logout</a>
+											
+									</div>
+ 								 </div>
+							
+							</li>	
 
+							<li #notdata>
+								<a (click)="login()">Login</a>
+							</li>
 													</ul>
 					</div>
 				</div>
@@ -46,3 +63,51 @@
 		</div>
 	</nav>
 </div>
+<style>
+	/* Style The Dropdown Button */
+	.dropbtn {
+	  background-color: orange;
+	  color: white;
+	  padding: 16px;
+	  font-size: 16px;
+	  border: none;
+	  cursor: pointer;
+	}
+	
+	/* The container <div> - needed to position the dropdown content */
+	.dropdown {
+	  position: relative;
+	  display: inline-block;
+	}
+	
+	/* Dropdown Content (Hidden by Default) */
+	.dropdown-content {
+	  display: none;
+	  position: absolute;
+	  background-color: #f9f9f9;
+	  min-width: 160px;
+	  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	  z-index: 1;
+	}
+	
+	/* Links inside the dropdown */
+	.dropdown-content a {
+	  color: black;
+	  padding: 12px 16px;
+	  text-decoration: none;
+	  display: block;
+	}
+	
+	/* Change color of dropdown links on hover */
+	.dropdown-content a:hover {background-color: #f1f1f1}
+	
+	/* Show the dropdown menu on hover */
+	.dropdown:hover .dropdown-content {
+	  display: block;
+	}
+	
+	/* Change the background color of the dropdown button when the dropdown content is shown */
+	.dropdown:hover .dropbtn {
+	  background-color: orange;
+	}
+</style>

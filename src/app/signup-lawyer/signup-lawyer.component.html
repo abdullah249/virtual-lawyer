@@ -4,7 +4,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-2">
-						<div id="colorlib-logo"><a href="index.html">LE<span>AID.</span></a></div>
+						<div id="colorlib-logo"><a href="index.html">Virtual<span>Lawyer</span></a></div>
 					</div>
 				
 				</div>
@@ -15,15 +15,11 @@
 
 		<div class="d-flex justify-content-center h-100">
 			<div class="card">
-				<div class="card-header">
+				<div class="card-header" style="font-size: large;font-family: sans-serif;">
 					<h3>Sign Up</h3>
-					<div class="d-flex justify-content-end social_icon">
-						<span><i class="fab fa-facebook-square"></i></span>
-						<span><i class="fab fa-google-plus-square"></i></span>
-						<span><i class="fab fa-twitter-square"></i></span>
-					</div>
+					
 				</div>
-				<div class="card-body">
+				<div class="card-body"  style="background-color: white;">
 					<form name="form" #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
 						<div *ngIf="error.invalid" class="form-group">
 							<div *ngIf="error" class="alert alert-danger">
@@ -35,9 +31,9 @@
 
 						<div class="input-group form-group">
 							<div class="input-group-prepend">
-								<span class="input-group"><i class="fas fa-user"></i></span>
+							
 							</div>
-							<input type="Email" class="form-control" placeholder="Email" required style="background-color: white" id="username" name="username" [(ngModel)]="data.username" #username="ngModel" email>
+							<input type="Email" class="form-control" placeholder="Email" required style="display: block !important;width: 100%;"  id="username" name="username" [(ngModel)]="data.username" #username="ngModel" email>
 							<div class="form-group">
 								<div *ngIf="username.invalid && (username.dirty || username.touched)"
 								class="alert alert-danger">
@@ -53,9 +49,9 @@
 						
 						<div class="input-group form-group">
 							<div class="input-group-prepend">
-								<span class="input-group"><i class="fas fa-key"></i></span>
+								
 							</div>
-							<input type="password" class="form-control" placeholder="Password" required="" style="background-color: white" minlength="6" id="password" name="password" [(ngModel)]="data.password" #password="ngModel">
+							<input type="password" class="form-control" placeholder="Password" required="" style="display: block !important;width: 100%;"  minlength="6" id="password" name="password" [(ngModel)]="data.password" #password="ngModel">
 							<div class="form-group">
 								<div *ngIf="password.invalid && (password.dirty || password.touched)"
 								class="alert alert-danger">
@@ -69,7 +65,7 @@
 							</div>
 						</div>
 						<div class="input-group form-group">
-							<select name="City" style="background-color: white;width:100%;height:50px" name="city" id="city" [(ngModel)]="data.city" #city="ngModel"><option selecteds>Lahore</option>
+							<select name="City" style="display: block !important;width: 100%;"  name="city" id="city" [(ngModel)]="data.city" #city="ngModel"><option selecteds>Lahore</option>
 								<option>Murree</option>
 								<option>Karachi</option>
 								<option>islamabad</option>
@@ -86,7 +82,7 @@
 							</div>
 						</div>
 						<div class="input-group form-group">
-							<input type="tel" class="form-control" name="State" placeholder="State" required="" style="background-color: white"id="state" [(ngModel)]="data.state" #state="ngModel">
+							<input type="tel" class="form-control" name="State" placeholder="State" required=""style="display: block !important;width: 100%;" id="state" [(ngModel)]="data.state" #state="ngModel">
 							<div class="form-group">
 								<div *ngIf="state.invalid && (state.dirty || state.touched)"
 								class="alert alert-danger">
@@ -97,7 +93,7 @@
 							</div>
 						</div>
 						<div class="input-group form-group">
-							<input type="tel" class="form-control" name="Address" placeholder="Business Address" required style="background-color: white"  name="buisness_address" id="buisness_address" [(ngModel)]="data.buisness_address" #buisness_address="ngModel">
+							<input type="tel" class="form-control" name="Address" placeholder="Business Address" required style="display: block !important;width: 100%;"   name="buisness_address" id="buisness_address" [(ngModel)]="data.buisness_address" #buisness_address="ngModel">
 							<div class="form-group">
 								<div *ngIf="buisness_address.invalid && (buisness_address.dirty || buisness_address.touched)"
 								class="alert alert-danger">
@@ -108,7 +104,7 @@
 							</div>
 						</div>
 						<div class="input-group form-group">
-							<input type="tel" class="form-control" name="Phone No." placeholder="Phone No." required="" style="background-color: white" id="phoneNumber" [(ngModel)]="data.phoneNumber" #phoneNumber="ngModel">
+							<input type="tel" class="form-control" name="Phone No." placeholder="Phone No." required="" style="display: block !important;width: 100%;"  id="phoneNumber" [(ngModel)]="data.phoneNumber" #phoneNumber="ngModel">
 							<div class="form-group">
 								<div *ngIf="phoneNumber.invalid && (phoneNumber.dirty || phoneNumber.touched)"
 								class="alert alert-danger">
@@ -123,7 +119,7 @@
 						</div>
 						
 						<div class="input-group form-group">
-							<input type="tel" class="form-control" name="CNIC" placeholder="CNIC " required="" style="background-color: white"name="CNIC" id="CNIC" [(ngModel)]="data.CNIC" #CNIC="ngModel">
+							<input type="tel" class="form-control" name="CNIC" placeholder="CNIC " required=""style="display: block !important;width: 100%;" name="CNIC" id="CNIC" [(ngModel)]="data.CNIC" #CNIC="ngModel">
 							<div class="form-group">
 								<div *ngIf="CNIC.invalid && (CNIC.dirty || CNIC.touched)"
 								class="alert alert-danger">
@@ -134,7 +130,7 @@
 							</div>
 						</div>
 						<div class="input-group form-group">
-							<input type="tel" class="form-control" placeholder="H.C.R No" required="" style="background-color: white" name="hcr_number" id="hcr_number" [(ngModel)]="data.hcr_number" #hcr_number="ngModel">
+							<input type="tel" class="form-control" placeholder="H.C.R No" required="" style="display: block !important;width: 100%;"  name="hcr_number" id="hcr_number" [(ngModel)]="data.hcr_number" #hcr_number="ngModel">
 							<div class="form-group">
 								<div *ngIf="hcr_number.invalid && (hcr_number.dirty || hcr_number.touched)"
 								class="alert alert-danger">
@@ -145,14 +141,17 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<input type="submit" (click)="home()" value="Sign Up" class="btn float-right login_btn" [disabled]="f.form.pristine || f.form.invalid">
-							<input type="submit" value="Cancel" class="btn float-right login_btn" style="margin-right: 10px">
+							<input type="submit" (click)="home()" value="Sign Up" class="btn float-right login_btn" [disabled]="f.form.pristine || f.form.invalid" style="background-color: aliceblue;border-block-end-color: #000;font-size: medium;">
+						
 						</div>
 					</form>
 				</div>
 				<div class="card-footer">
 					<div class="d-flex justify-content-center">
 						<a href="#">Forgot your password?</a>
+					</div>
+					<div class="d-flex justify-content-center links">
+						Already have a account?<a routerLink="/login">Sign In!</a>
 					</div>
 				</div>
 			</div>
